@@ -1,0 +1,32 @@
+.marketplace {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+
+  &__title {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  h5 {
+    text-align: center;
+  }
+
+  &__modal_header {
+    margin-bottom: 18px;
+    text-align: center;
+
+    h5 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__modal_body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+}

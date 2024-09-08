@@ -1,0 +1,31 @@
+.cropper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__preview {
+    position: relative;
+  }
+
+  &__result {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+  }
+}

@@ -1,0 +1,93 @@
+.withdraw {
+  position: relative;
+  min-height: calc($tgViewportHeight - 20vh);
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 12px;
+      font-weight: 400;
+      color: $gray100;
+    }
+
+    input {
+      background-color: $gray00;
+
+      &::-moz-placeholder {
+        color: $gray100;
+      }
+      &::-ms-input-placeholder {
+        color: $gray100;
+      }
+      &::-webkit-input-placeholder {
+        color: $gray100;
+      }
+    }
+
+    &_body {
+      display: flex;
+      flex-direction: column;
+      gap: 15px 0;
+      flex: 1;
+    }
+
+    &_footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px 0;
+      margin-top: auto;
+    }
+
+    &_control {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 5px 0;
+
+      &_suffix {
+        font-size: 14px;
+        color: $gray100;
+        position: absolute;
+        right: 15px;
+      }
+
+      &_alt {
+        input {
+          padding-right: 50px;
+        }
+
+        & > span {
+          position: absolute;
+          right: 15px;
+          top: calc(50% + 1px);
+        }
+      }
+    }
+
+    &_slider {
+      padding: 3px 10px;
+    }
+
+    &_infoline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      color: $gray100;
+    }
+  }
+}
+
+.amount {
+  text-align: right;
+}

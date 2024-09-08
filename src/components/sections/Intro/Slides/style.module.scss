@@ -1,0 +1,168 @@
+.slide {
+  height: 100%;
+  padding-bottom: 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__note {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5px;
+
+    img {
+      margin: 0 4px;
+    }
+  }
+
+  &__media {
+    position: relative;
+    margin: 0 calc(-1 * $containerGlobalPadding);
+    padding: $containerGlobalPadding;
+
+    &_bg {
+      object-fit: cover;
+    }
+
+    &_content {
+      position: relative;
+      background-color: $gray00;
+      border-radius: 20px;
+      padding: 11px;
+      display: flex;
+      align-items: center;
+      gap: 0 12px;
+      z-index: 1;
+    }
+
+    &_icon {
+      min-width: 48px;
+      max-width: 48px;
+      min-height: 48px;
+      max-height: 48px;
+      border-radius: 50%;
+      position: relative;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &_title {
+      flex: 1;
+    }
+  }
+
+  &__boards {
+    &_title {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &_list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px 0;
+
+      & > div {
+        h6 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__counter {
+    position: relative;
+    margin-bottom: 30px;
+
+    &_bg {
+      object-fit: cover;
+    }
+
+    h2 {
+      position: relative;
+      margin-bottom: 28px;
+      z-index: 1;
+    }
+
+    &_timer {
+      display: flex;
+      max-width: 330px;
+      align-items: center;
+      gap: 0 18px;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+
+      div {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $gray00;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: lowercase;
+        flex: 1;
+        padding: 15px 0;
+
+        span {
+          &:nth-child(1) {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1;
+          }
+        }
+      }
+    }
+
+    &_note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 10px;
+      font-size: 14px;
+      color: $green;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $gray100;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    margin-bottom: 35px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+
+    h5 {
+      text-align: center;
+    }
+
+    &_buttons {
+      display: flex;
+      align-items: center;
+      gap: 0 12px;
+
+      button {
+        flex: 1;
+        border-radius: 20px;
+      }
+    }
+  }
+}

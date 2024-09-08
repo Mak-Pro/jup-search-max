@@ -1,0 +1,37 @@
+.settings {
+  &__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    align-items: center;
+
+    &_item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px 0;
+
+      & > button {
+        width: 100%;
+        height: 48px;
+        font-weight: 500 !important;
+      }
+
+      &_result {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+
+        h6 {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

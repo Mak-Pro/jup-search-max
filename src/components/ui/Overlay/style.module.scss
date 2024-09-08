@@ -1,0 +1,12 @@
+.overlay {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 0 $containerGlobalPadding;
+  background-color: $tgBgColor;
+  z-index: 110;
+}

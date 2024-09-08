@@ -1,0 +1,19 @@
+.spinner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $tgViewportStableHeight;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 60;
+  overflow: hidden;
+
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+}

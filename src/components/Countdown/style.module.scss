@@ -1,0 +1,157 @@
+.countdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0;
+  overflow: hidden;
+
+  & > * {
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    gap: 0 8px;
+    width: auto;
+    margin-left: auto;
+
+    span {
+      font-variant-numeric: tabular-nums;
+      display: block;
+
+      i {
+        display: inline-block;
+        min-width: 50px;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+
+    button {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 56px;
+    background-color: $gray10;
+    border-radius: 99px;
+    overflow: hidden;
+
+    &_hidden {
+      display: none;
+    }
+
+    &_info {
+      width: 100%;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1;
+
+      &_overlay {
+        position: absolute !important;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: $green;
+        border-radius: 99px;
+        transform: translateX(-100%);
+      }
+
+      & > * {
+        position: relative;
+        display: inline-block;
+        mix-blend-mode: difference;
+        color: #ddd;
+        font-weight: 600;
+      }
+
+      &_farmed {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        i {
+          display: inline-block;
+          min-width: 32px;
+        }
+      }
+
+      &_passed {
+        font-size: 14px;
+      }
+    }
+
+    &_progress {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $green;
+      border-radius: 99px;
+      width: 100%;
+      z-index: 0;
+      transform: translateX(-100%);
+
+      &_lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-image: linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.15) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.15) 50%,
+          rgba(255, 255, 255, 0.15) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 30px 30px;
+        animation: move 2s linear infinite;
+        border-radius: 99px;
+        overflow: hidden;
+        z-index: 2;
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+.claim {
+  i {
+    display: inline-block;
+    min-width: 32px;
+    margin-left: -6px;
+  }
+}

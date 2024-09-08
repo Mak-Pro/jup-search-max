@@ -1,0 +1,55 @@
+:export {
+  // telegram
+  tgBgColor: $tgBgColor;
+  tgTextColor: $tgTextColor;
+  tgSecondaryBgColor: $tgSecondaryBgColor;
+  tgAccentTextColor: $tgAccentTextColor;
+  tgHintColor: $tgHintColor;
+  tgLinkColor: $tgLinkColor;
+  tgButtonBgColor: $tgButtonBgColor;
+  tgButtonTextColor: $tgButtonTextColor;
+  tgHeaderBgColor: $tgHeaderBgColor;
+  tgSectionBgColor: $tgSectionBgColor;
+  tgSectionHeaderTextColor: $tgSectionHeaderTextColor;
+  tgSubTitleTextColor: $tgSubTitleTextColor;
+  tgDestructiveTextColor: $tgDestructiveTextColor;
+  tgColorScheme: $tgColorScheme;
+  tgViewportHeight: $tgViewportHeight;
+  tgViewportStableHeight: $tgViewportStableHeight;
+
+  // colors
+  white: $white;
+  black: $black;
+  green: $green;
+  green40: $green40;
+  red: $red;
+  red40: $red40;
+  orange: $orange;
+  violet: $violet;
+
+  gray00: $gray00;
+  gray10: $gray10;
+  gray20: $gray20;
+  gray30: $gray30;
+  gray40: $gray40;
+  gray100: $gray100;
+
+  // breakpoints
+  width349: $width-349;
+  width599: $width-599;
+  width767: $width-767;
+  width992: $width-992;
+  width1199: $width-1199;
+  width1299: $width-1299;
+  width1399: $width-1399;
+  width1440: $width-1440;
+  width1499: $width-1499;
+  width1600: $width-1600;
+
+  // layout
+  containerGlobalPadding: $containerGlobalPadding;
+  maxWidth: $maxWidth;
+  bottomGlobalPadding: $bottomGlobalPadding;
+  bottomGlobalNavPadding: $bottomGlobalNavPadding;
+  borderGlobalRadius: $borderGlobalRadius;
+}

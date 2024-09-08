@@ -1,0 +1,79 @@
+.mascot__box {
+  position: fixed;
+  height: $tgViewportHeight;
+  left: 0;
+  top: 0;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mascot {
+  background: linear-gradient(
+    0deg,
+    rgba(75, 34, 104, 1) 0%,
+    rgba(11, 11, 35, 1) 100%
+  );
+  position: relative;
+  height: $tgViewportHeight;
+  margin: 0 calc(-1 * $containerGlobalPadding);
+  padding-bottom: $bottomGlobalNavPadding;
+  display: flex;
+  flex-direction: column;
+  padding: 0 $containerGlobalPadding;
+  overflow: hidden;
+
+  &__bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50vh;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__animation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -5px;
+    bottom: -1vh;
+    width: 110vw;
+    height: 115vh;
+
+    svg {
+      width: 115% !important;
+      height: 115% !important;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%) !important;
+      top: 50%;
+    }
+  }
+
+  &__points {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: $tgViewportHeight;
+
+    svg {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%) !important;
+      margin-top: -20vh;
+      margin-left: 20vw;
+    }
+  }
+
+  &__counter {
+    flex: 1;
+    padding-bottom: $bottomGlobalNavPadding;
+    padding-top: 10vh;
+  }
+}

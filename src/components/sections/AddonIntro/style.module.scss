@@ -1,0 +1,123 @@
+.intro {
+  height: $tgViewportHeight;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0 $bottomGlobalPadding;
+  margin-bottom: $bottomGlobalNavPadding;
+  position: relative;
+  z-index: 11;
+
+  &__slider_box {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    position: relative;
+
+    &_overlay {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 380px;
+      border-radius: 18px;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        display: block;
+        padding-top: 93%;
+        background-image: url("/images/addon-slider-bg.png");
+        background-size: auto;
+        background-position: center center;
+        background-color: $gray00;
+      }
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 380px;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+
+    &_slide {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px 0;
+
+      &_content {
+        text-align: center;
+        max-width: 370px;
+        font-size: 14px;
+        overflow: hidden;
+
+        &_title {
+          line-height: 1.2;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 16px;
+          color: #d2d6db;
+        }
+      }
+
+      &_image {
+        position: relative;
+        width: 100%;
+        padding-top: 93%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          object-fit: contain;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          margin-top: 8px;
+          max-width: 92%;
+        }
+      }
+    }
+
+    &_pagination {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > div {
+        width: auto !important;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        background-color: $gray00;
+        border-radius: 100px;
+        padding: 0 12px;
+
+        span {
+          width: 8px !important;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      min-width: 210px;
+      font-weight: 600;
+    }
+  }
+}

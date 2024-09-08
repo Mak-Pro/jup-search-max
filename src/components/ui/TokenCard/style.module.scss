@@ -1,0 +1,390 @@
+.token__card,
+.token__card_L {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  width: 380px;
+  height: 100%;
+  font-family: inherit;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out 0s;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  @include breakpoint($width-1199, max) {
+    width: 312px;
+  }
+
+  &_M {
+    width: 280px;
+  }
+
+  &_S {
+    width: 240px;
+  }
+
+  &_link {
+    display: block;
+    font-size: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+
+  &_wrapper {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &_banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 42%;
+    overflow: hidden;
+    z-index: 0;
+
+    @include breakpoint($width-1199, max) {
+      height: 37%;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1b232c;
+      opacity: 0.45;
+      z-index: 1;
+    }
+
+    img {
+      object-fit: cover;
+      height: 102% !important;
+      z-index: 0;
+      filter: blur(2px);
+    }
+
+    &_empty {
+      img {
+        filter: blur(40px);
+        width: 160px !important;
+        height: 160px !important;
+        border-radius: 50%;
+        overflow: hidden;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &_inner {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    padding: 18px;
+    gap: 0 24px;
+    height: 100%;
+
+    @include breakpoint($width-1199, max) {
+      padding: 16px;
+      gap: 0 15px;
+    }
+
+    &_M {
+      padding: 16px;
+      gap: 0 10px;
+
+      @include breakpoint($width-1199, max) {
+        padding: 12px;
+        gap: 0 20px;
+      }
+
+      & > div {
+        &:nth-child(1) {
+          max-width: calc(50% - 16px);
+        }
+      }
+    }
+
+    &_S {
+      padding: 10px;
+      gap: 0 10px;
+
+      @include breakpoint($width-1199, max) {
+        gap: 0 5px;
+      }
+
+      & > div {
+        &:nth-child(1) {
+          max-width: calc(50% - 10px);
+        }
+      }
+    }
+
+    &_left {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      max-width: calc(50% - 15px);
+
+      @include breakpoint($width-1199, max) {
+        max-width: 50%;
+      }
+    }
+
+    &_right {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+    }
+  }
+
+  &_logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+    margin-bottom: 15px;
+    min-height: 120px;
+
+    @include breakpoint($width-1199, max) {
+      margin-top: 30px;
+      margin-bottom: 11px;
+    }
+
+    &_M,
+    &_S {
+      min-width: 72px;
+      max-width: 72px;
+      min-height: 72px;
+      max-height: 72px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 9px;
+      min-height: 72px;
+    }
+
+    &_M {
+      @include breakpoint($width-1199, max) {
+        margin-bottom: 16px;
+      }
+    }
+
+    img {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  &_title {
+    line-height: 1.1;
+    margin-bottom: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include breakpoint($width-1199, max) {
+      font-size: 16px;
+    }
+
+    &_M {
+      font-size: 18px;
+
+      @include breakpoint($width-1199, max) {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 13px;
+      }
+    }
+
+    &_S {
+      font-size: 16px;
+
+      @include breakpoint($width-1199, max) {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &_values {
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+    margin-bottom: 18px;
+
+    @include breakpoint($width-1199, max) {
+      font-size: 12px;
+    }
+
+    &_M {
+      font-size: 12px;
+      gap: 13px 0;
+      margin-bottom: 0;
+    }
+
+    &_S {
+      font-size: 10px;
+      gap: 12px 0;
+      margin-bottom: 0;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    & > * {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #a1a6b0;
+
+      span {
+        color: $gray100;
+      }
+    }
+  }
+
+  &_price {
+    span {
+      position: relative;
+      font-size: 0.8em;
+      top: 0.2em;
+      -webkit-padding-start: 0.2em;
+      padding-inline-start: 0.2em;
+      -webkit-padding-end: 0.2em;
+      padding-inline-end: 0.2em;
+    }
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 4px 0;
+    min-height: 100%;
+
+    @include breakpoint($width-1199, max) {
+      font-size: 12px;
+    }
+
+    &_M {
+      font-size: 12px;
+
+      div {
+        padding: 0 12px !important;
+        height: 42px !important;
+        margin-bottom: 0 !important;
+
+        &:first-child {
+          background-color: $gray20 !important;
+          color: $gray40 !important;
+
+          &::before {
+            display: none;
+          }
+
+          span {
+            color: $gray40 !important;
+          }
+        }
+      }
+    }
+
+    &_S {
+      font-size: 10px;
+
+      div {
+        padding: 0 8px !important;
+        height: 40px !important;
+        margin-bottom: 0 !important;
+
+        span {
+          font-size: 12px;
+        }
+
+        &:first-child {
+          background-color: $gray20 !important;
+          color: $gray40 !important;
+
+          &::before {
+            display: none;
+          }
+
+          span {
+            color: $gray40 !important;
+          }
+        }
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 12px;
+      background-color: $gray10;
+      color: #d2d6db;
+      padding: 0 16px;
+      height: 44px;
+      position: relative;
+      overflow: hidden;
+
+      @include breakpoint($width-1199, max) {
+        height: 38px;
+        padding: 0 10px;
+      }
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    &_lead {
+      color: $black;
+      background-color: transparent !important;
+      margin-bottom: auto;
+      color: $black !important;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: #d2d6db;
+        opacity: 0.9;
+        filter: blur(1px);
+      }
+
+      & > * {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+      }
+
+      span {
+        font-weight: 700 !important;
+      }
+    }
+  }
+}

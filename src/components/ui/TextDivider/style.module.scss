@@ -1,0 +1,26 @@
+.divider {
+  font-size: 14px;
+  font-weight: 400;
+  color: $gray40;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: $gray20;
+    flex: 1;
+    position: relative;
+    top: 2px;
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+  }
+}

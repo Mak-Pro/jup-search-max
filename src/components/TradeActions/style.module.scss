@@ -1,0 +1,328 @@
+.trade {
+  // actions
+  &__actions {
+    background-color: $gray00;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+  }
+
+  // tabs
+  &__tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+
+    &__controls {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &__control {
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      height: 44px;
+      padding: 0 20px;
+      font-size: 16px;
+      font-weight: 400;
+      border-radius: 100px;
+      color: $gray40;
+      filter: grayscale(1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+
+      &_active {
+        background-color: $gray10;
+        font-weight: 600;
+        filter: grayscale(0);
+      }
+
+      &_buy {
+        color: $green40;
+      }
+
+      &_sell {
+        color: $red40;
+      }
+    }
+
+    &__panels {
+      position: relative;
+    }
+
+    &__panel {
+      position: relative;
+    }
+  }
+
+  // edit
+  &__edit {
+    position: relative;
+
+    &_btn {
+      min-width: 36px;
+      max-width: 36px;
+      min-height: 36px;
+      max-height: 36px;
+      background-color: $gray10;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &_choice {
+      display: inline-flex;
+      align-items: center;
+      background-color: $gray10;
+      height: 36px;
+      border-radius: 50px;
+      position: relative;
+
+      &::after {
+        content: "";
+        height: 18px;
+        width: 1px;
+        background-color: $gray20;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      button {
+        width: 35px;
+        height: 36px;
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &_tabs {
+      position: absolute;
+      right: 0;
+      top: 5px;
+    }
+  }
+
+  // options
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 0;
+  }
+
+  &__option {
+    position: relative;
+    width: calc(100% / 3);
+    padding: 0 4px;
+
+    button {
+      height: 52px;
+      width: 100%;
+      font-weight: 500;
+      padding: 0 10px;
+    }
+
+    &_edit {
+      position: relative;
+      background-color: $black;
+      border-radius: 12px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: $gray40;
+      font-size: 14px;
+      gap: 0 5px;
+      padding: 0 18px;
+      font-weight: 500;
+
+      i {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $gray10;
+        border-radius: 12px;
+        transition: all 0.3s ease 0s;
+      }
+
+      input {
+        position: absolute;
+        border-radius: 0;
+        height: auto;
+        background-color: transparent;
+        border: 0 none;
+        color: $gray40;
+        padding: 0;
+        width: 50%;
+        text-align: right;
+        transition: all 0.3s ease 0s;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 5;
+        width: 100%;
+        padding: 18px 49px 18px 0;
+        font-weight: 500;
+        line-height: 1.3;
+
+        &:focus {
+          color: $gray30;
+
+          & ~ span {
+            color: $gray30;
+          }
+
+          & ~ i {
+            border-color: $gray20;
+          }
+        }
+      }
+
+      span {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        transition: all 0.3s ease 0s;
+        z-index: 2;
+      }
+    }
+  }
+
+  // custom
+  &__custom {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    font-size: 14px;
+
+    &_alt {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px 0;
+
+      & > * {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      button {
+        font-size: 14px;
+      }
+    }
+
+    button {
+      flex: 1;
+      height: 52px;
+      min-height: 52px;
+      white-space: initial;
+      font-size: 12px;
+
+      &:disabled {
+        background-color: #2e394a !important;
+      }
+    }
+
+    &_value {
+      position: relative;
+      width: 154px;
+      max-width: 45%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $black;
+      border-radius: 12px;
+      height: 52px;
+      padding: 0 15px;
+      gap: 0 10px;
+      overflow: hidden;
+
+      input {
+        background-color: transparent;
+        height: auto;
+        border: 0 none;
+        z-index: 1;
+        text-align: right;
+        padding: 0;
+        border-radius: 0;
+        order: 1;
+        color: $gray40;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        padding: 18px 48px;
+        line-height: 1.3;
+        transition: all 0.3s ease 0s;
+
+        &:focus {
+          color: $gray30;
+          & ~ span {
+            color: $gray30;
+          }
+
+          & ~ i {
+            border-color: $gray20;
+          }
+        }
+      }
+
+      i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $gray10;
+        transition: all 0.3s ease 0s;
+        z-index: 0;
+        border-radius: 12px;
+      }
+
+      span {
+        color: $gray40;
+        transition: all 0.3s ease 0s;
+        order: 2;
+
+        &:nth-of-type(1) {
+          order: 0;
+        }
+      }
+    }
+  }
+
+  &__slider {
+    padding: 0 10px;
+  }
+}
+
+.inactive {
+  pointer-events: none !important;
+  background-color: #1f2935 !important;
+  color: $gray40 !important;
+  cursor: not-allowed !important;
+}
+
+.disabled {
+  background-color: $black !important;
+  color: $gray40 !important;
+  pointer-events: none;
+}
+
+.disabled_alt {
+  background-color: #2e394a !important;
+  color: $gray40 !important;
+  pointer-events: none;
+}

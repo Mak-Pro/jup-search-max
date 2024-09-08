@@ -1,0 +1,25 @@
+.user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+
+  &__avatar {
+    min-width: 48px;
+    max-width: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    border-radius: 50%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__nickname {
+    position: relative;
+  }
+}

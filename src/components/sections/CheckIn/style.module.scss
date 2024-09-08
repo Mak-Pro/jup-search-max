@@ -1,0 +1,95 @@
+.checkin {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: $tgViewportHeight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_loaded {
+    & > div {
+      &:nth-child(1) {
+        opacity: 1;
+      }
+    }
+
+    h5,
+    p {
+      opacity: 1 !important;
+      top: 0 !important;
+    }
+  }
+
+  &__overlay {
+    background-image: url("/images/stars.webp");
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    animation: slide 60s linear infinite;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  &__content {
+    text-align: center;
+    position: relative;
+    max-width: 290px;
+    margin: 0 auto;
+
+    &_title {
+      font-size: 74px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: center;
+
+      & > div {
+        &::before {
+          display: none;
+        }
+
+        & > div {
+          aspect-ratio: 1/1.2;
+          padding-top: 2px;
+
+          span {
+            font-weight: 800;
+            color: inherit;
+            line-height: 1;
+          }
+        }
+      }
+    }
+
+    &_subtitle {
+      position: relative;
+      margin-bottom: 20px;
+      opacity: 0;
+      top: 20px;
+      transition: all 0.3s ease 0.2s;
+    }
+
+    p {
+      color: $gray100;
+      position: relative;
+      opacity: 0;
+      top: 20px;
+      transition: all 0.3s ease 0.4s;
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 1903px;
+  }
+}

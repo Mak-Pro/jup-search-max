@@ -1,0 +1,59 @@
+.status__box {
+  position: relative;
+  background-color: $gray00;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 8px 0 20px;
+  color: $white;
+
+  &_close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1;
+  }
+
+  &_content {
+    position: relative;
+  }
+
+  &_icon {
+    position: relative;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  &_text {
+    font-size: 14px;
+    // color: $gray30;
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+  }
+
+  &_success {
+    background-color: $green40;
+    color: $black;
+
+    & > button {
+      filter: contrast(5);
+    }
+  }
+
+  &_error {
+    background-color: $red;
+    color: $black;
+    padding-top: 30px;
+
+    & > button {
+      filter: contrast(5) invert(1);
+    }
+  }
+}

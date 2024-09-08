@@ -1,0 +1,34 @@
+.tasks {
+  height: $tgViewportHeight;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+
+  &__title {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    & > * {
+      position: relative;
+      top: -4px;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    margin-top: 18px;
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: $bottomGlobalNavPadding + 28px;
+  }
+}

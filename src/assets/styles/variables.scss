@@ -1,0 +1,53 @@
+// telegram
+$tgBgColor: var(--tg-theme-bg-color, #ffffff);
+$tgTextColor: var(--tg-theme-text-color, #1e2126);
+$tgSecondaryBgColor: var(--tg-theme-secondary-bg-color);
+$tgAccentTextColor: var(--tg-theme-accent-text-color);
+$tgHintColor: var(--tg-theme-hint-color);
+$tgLinkColor: var(--tg-theme-link-color);
+$tgButtonBgColor: var(--tg-theme-button-color, #499fdf);
+$tgButtonTextColor: var(--tg-theme-button-text-color, #ffffff);
+$tgHeaderBgColor: var(--tg-theme-header-bg-color);
+$tgSectionBgColor: var(--tg-theme-section-bg-color);
+$tgSectionHeaderTextColor: var(--tg-theme-section-header-text-color);
+$tgSubTitleTextColor: var(--tg-theme-subtitle-text-color);
+$tgDestructiveTextColor: var(--tg-theme-destructive-text-color);
+$tgColorScheme: var(--tg-color-scheme);
+$tgViewportHeight: var(--tg-viewport-height);
+$tgViewportStableHeight: var(--tg-viewport-stable-height);
+
+// colors
+$white: #ffffff;
+$black: #1b232c;
+$green: #c7f284;
+$green40: #30df7b;
+$red: #ff5a43;
+$red40: #ff7878;
+$orange: #fe9f47;
+$violet: #c872e8;
+
+$gray00: #242f3d;
+$gray10: #313d4f;
+$gray20: #465264;
+$gray30: #d2d6db;
+$gray40: #909baa;
+$gray100: #e1e4e7;
+
+// breakpoints
+$width-349: 349px;
+$width-599: 599px;
+$width-767: 767px;
+$width-992: 992px;
+$width-1199: 1199px;
+$width-1299: 1299px;
+$width-1399: 1399px;
+$width-1440: 1440px;
+$width-1499: 1499px;
+$width-1600: 1600px;
+
+// layout
+$containerGlobalPadding: 15px;
+$maxWidth: 560px;
+$bottomGlobalPadding: 30px;
+$bottomGlobalNavPadding: 112px;
+$borderGlobalRadius: 20px;
