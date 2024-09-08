@@ -40,8 +40,6 @@ body {
   //overscroll-behavior: contain;
   position: relative;
   margin: 0 auto;
-  opacity: 0;
-  visibility: hidden;
   transition: all 0.3s ease 0s;
 
   &.show {
