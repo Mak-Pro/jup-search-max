@@ -17,10 +17,12 @@ export const SearchField = ({
     }
   }, [searchValue]);
 
-  const eventScroll = (e)=>{
+  const eventScroll = (e: Event) => {
     e.preventDefault();
-    e.stopPropagation()
-    inputRef.current.scrollIntoView();
+    e.stopPropagation();
+    if (inputRef && inputRef.current !== null) {
+      inputRef.current.scrollIntoView();
+    }
   };
 
   const handleFocusBlur = (e: FocusEvent<HTMLInputElement, Element>) => {
@@ -39,13 +41,13 @@ export const SearchField = ({
           .querySelector(".search-title")
           ?.classList.add("search-title-active");
 
-        if(window){
-          window.addEventListener('scroll', eventScroll);
+        if (window) {
+          window.addEventListener("scroll", eventScroll);
         }
       }
       if (e.type === "blur") {
-        if(window){
-          window.removeEventListener('scroll', eventScroll);
+        if (window) {
+          window.removeEventListener("scroll", eventScroll);
         }
         document.querySelector("main")?.classList.remove("search-active");
         document
